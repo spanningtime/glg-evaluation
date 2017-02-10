@@ -1,1 +1,1 @@
-# glg-evaluation
+# landing page test project

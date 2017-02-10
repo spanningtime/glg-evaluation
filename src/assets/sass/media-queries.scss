@@ -1,0 +1,11 @@
+@mixin mobile {
+  @media screen and (max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin text-decor-hov {
+  &:hover {
+    text-decoration: none;
+  }
+}

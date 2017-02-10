@@ -1,0 +1,178 @@
+@import 'base';
+@import 'media-queries';
+
+.nav-bar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+
+  @include mobile {
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    width: 100%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .nav-links-group1 {
+    justify-content: flex-start;
+    margin-left: 10%;
+  }
+
+  .nav-links-group2 {
+    justify-content: flex-end;
+    margin-right: 10%;
+
+    @include mobile {
+      margin-right: 0px;
+    }
+  }
+
+  a {
+    padding: 10px;
+  }
+
+  .glyphicon-menu-hamburger {
+    display: none;
+    font-size: 30px;
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.carousel-caption {
+  bottom: 25% !important;
+
+  .caption-container {
+    background-color: $overlay;
+    margin: 0 auto;
+    padding: 10px 0 20px 0;
+    width: 75%;
+  }
+  .learn-btn {
+    background-color: $black;
+    border: none;
+    font-weight: 700;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 150px;
+
+    &:hover {
+      background-color: $grey;
+    }
+  }
+
+  .learn-link {
+    color: $white;
+    display: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  @include mobile {
+    height: 70%;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    p, button, br {
+      display: none;
+    }
+
+    .learn-link {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+.overlay-container:hover .overlay {
+  display: block;
+}
+
+.overlay {
+  background-color: $overlay;
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .overlay-text {
+    margin-top: 30%;
+    text-align: center;
+  }
+}
+
+.carousel-indicators li {
+  background-color: $grey;
+  border: none;
+
+  &:hover {
+    background-color: lighten($grey, 20%);
+  }
+}
+
+.third-section {
+  background-color: $dark-grey;
+  padding: 40px 0 40px 0;
+
+  .row {
+    margin: 0 8% 0 8%;
+  }
+
+  .extra-img-mobile {
+    display: none;
+  }
+
+  aside {
+    margin-bottom: 5px;
+  }
+
+  @include mobile {
+    .extra-img-mobile {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .rmv-img-mobile {
+      display: none;
+    }
+  }
+}
+
+footer {
+  align-items: center;
+  background-color: $black;
+  display: flex !important;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 12% 0 12%;
+
+  #facebook,
+  #twitter,
+  #youtube,
+  #instagram {
+    &:hover {
+      cursor: pointer;
+      fill: rgba(129, 129, 129, 1);
+    }
+  }
+}

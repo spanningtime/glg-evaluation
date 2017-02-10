@@ -1,0 +1,76 @@
+/* colors & typography */
+
+$grey: rgb(129, 129, 129);
+$dark-grey: rgb(51, 51, 51);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$overlay: rgba(0, 0, 0, 0.7);
+$black-overlay: rgba(0, 0, 0, 0.7);
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+
+//nav bar
+.nav-bar {
+  background-color: #f2f2f2;
+
+  .nav-links a {
+    color: $grey !important;
+    font-size: 13px;
+
+    &:hover {
+      color: $dark-grey !important;
+      text-decoration: none;
+    }
+  }
+
+  header {
+    font-size: 24px;
+  }
+}
+
+// tile overlay
+.overlay-text {
+  color: $white;
+  font-size: 18px;
+}
+
+// alternating section description overlay
+.description {
+  color: $white;
+  font-size: 16px;
+
+  a {
+    color: $white;
+    margin-top: 5px;
+
+    &:hover {
+      color: $grey;
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .triangle {
+    font-size: 10px;
+  }
+}
+
+// removes extra margin & padding from bootstrap grid
+.row.no-padding {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tiles-container,
+.row.no-padding [class*='col-']:not(:first-child),
+.row.no-padding [class*='col-']:not(:last-child), {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
