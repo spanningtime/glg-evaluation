@@ -37,6 +37,9 @@ module.exports = function(grunt) {
         files: ['src/assets/sass/*.scss'],
         tasks: ['sass']
       },
+      javascript: {
+        files: ['src/app/main.js']
+      },
       html: {
         files: ['src/index.html']
       }
