@@ -65,6 +65,7 @@
     padding: 10px;
     text-transform: uppercase;
     width: 150px;
+    transition: background-color 800ms;
 
     &:hover {
       background-color: $grey;
@@ -99,11 +100,11 @@
   }
 }
 
-// .overlay-container:hover .overlay {
-//   // display: block;
-//   opacity: 1;
-//   transition: opacity 800ms;
-// }
+.overlay-container:hover .overlay {
+  // display: block;
+  opacity: 1;
+  transition: opacity 800ms;
+}
 
 .overlay {
   background-color: $overlay;

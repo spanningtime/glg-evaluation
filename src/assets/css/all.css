@@ -136,6 +136,7 @@ body {
   padding: 10px;
   text-transform: uppercase;
   width: 150px;
+  transition: background-color 800ms;
 }
 
 .carousel-caption .learn-btn:hover {
@@ -166,6 +167,11 @@ body {
     display: block;
     text-decoration: none;
   }
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1;
+  transition: opacity 800ms;
 }
 
 .overlay {

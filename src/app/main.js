@@ -56,6 +56,9 @@
   };
 
   $tilesContainer.click((event) => {
+    if (window.innerWidth > 768) {
+      return;
+    }
     let $target = $(event.target)
     checkOverlay($target);
   })
