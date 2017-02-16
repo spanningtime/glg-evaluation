@@ -5,7 +5,7 @@
 
   const $tilesContainer = $(".tiles-container");
   const $tiles = $(".tile");
-  const $overlays = $(".overlay")
+  const $overlays = $(".overlay");
 
 
   const addOverlay = function(target) {
@@ -14,10 +14,10 @@
 
   const removeOverlay = function(target) {
     if (target.hasClass("overlay")) {
-      target[0].style.opacity = '0'
+      target.eq(0).css('opacity', '0')
     }
     $overlays.each((i, obj) => {
-      obj.style.opacity = '0'
+      $(obj).css("opacity", "0");
     })
   };
 
@@ -35,10 +35,10 @@
       }
     }
 
-    else if (overlay.style.opacity === '1') {
-      overlay.style.opacity = '0';
+    else if (overlay.css("opacity", "1")) {
+      overlay.css("opacity", "0");
     }
-  }
+  };
 
   const checkOverlay = function(target) {
     if (target.hasClass("overlay-text")) {

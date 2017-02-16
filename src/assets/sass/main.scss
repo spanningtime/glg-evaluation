@@ -57,7 +57,12 @@
     margin: 0 auto;
     padding: 10px 0 20px 0;
     width: 75%;
+
+    @include mobile {
+      background-color: rgba(0, 0, 0, 0)
+    }
   }
+
   .learn-btn {
     background-color: $black;
     border: none;
@@ -86,7 +91,9 @@
     height: 70%;
 
     h1 {
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 2px $dark-grey;
     }
 
     p, button, br {
@@ -97,11 +104,23 @@
       display: block;
       text-decoration: none;
     }
+
+    .triangle {
+      font-size: 8px;
+      line-height: 8px;
+    }
+  }
+}
+
+.tiles-container {
+  background-color: $dark-grey;
+
+  .responsive-img {
+    transform: all 800ms;
   }
 }
 
 .overlay-container:hover .overlay {
-  // display: block;
   opacity: 1;
   transition: opacity 800ms;
 }
