@@ -47,6 +47,10 @@
       display: block;
     }
   }
+
+  .dropdown-menu {
+    left: -80px;
+  }
 }
 
 .carousel-caption {
@@ -152,6 +156,10 @@
 
   &:hover {
     background-color: lighten($grey, 20%);
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 

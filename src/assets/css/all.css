@@ -118,6 +118,10 @@ body {
   }
 }
 
+.nav-bar .dropdown-menu {
+  left: -80px;
+}
+
 .carousel-caption {
   bottom: 25% !important;
 }
@@ -222,6 +226,12 @@ body {
 
 .carousel-indicators li:hover {
   background-color: #b4b4b4;
+}
+
+@media screen and (max-width: 580px) {
+  .carousel-indicators li {
+    display: none;
+  }
 }
 
 .third-section {

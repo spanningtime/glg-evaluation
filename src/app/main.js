@@ -1,6 +1,7 @@
 (function() {
   $(document).ready(function() {
     $('.carousel').carousel()
+    $('.dropdown-toggle').dropdown()
   });
 
   const $tilesContainer = $(".tiles-container");
