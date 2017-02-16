@@ -4,8 +4,14 @@
   }
 }
 
-// @mixin text-decor-hov {
-//   &:hover {
-//     text-decoration: none;
-//   }
-// }
+@mixin mobile-tiles {
+  @media screen and (max-width: 768px) and (min-width: 544px) {
+    @content;
+  }
+}
+
+@mixin small-screen-3rd-section {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}

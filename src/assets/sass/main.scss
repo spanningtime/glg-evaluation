@@ -54,9 +54,17 @@
 }
 
 .carousel-caption {
-  bottom: 25% !important;
+  height: 100%;
 
-  .caption-container {
+  .caption-box-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .caption-box {
     background-color: $overlay;
     margin: 0 auto;
     padding: 10px 0 20px 0;
@@ -93,12 +101,6 @@
 
   @include mobile {
     height: 70%;
-
-    h1 {
-      font-size: 20px;
-      font-weight: 700;
-      text-shadow: 2px 2px 2px $dark-grey;
-    }
 
     p, button, br {
       display: none;
@@ -179,7 +181,7 @@
     margin-bottom: 5px;
   }
 
-  @include mobile {
+  @include small-screen-3rd-section {
     .extra-img-mobile {
       display: block;
       margin-top: 10px;

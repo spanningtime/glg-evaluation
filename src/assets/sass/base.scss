@@ -1,8 +1,10 @@
+@import 'media-queries';
 /* colors & typography */
 
 $grey: rgb(129, 129, 129);
 $dark-grey: rgb(51, 51, 51);
 $white: rgb(255, 255, 255);
+$offwhite: rgb(242, 242, 242);
 $black: rgb(0, 0, 0);
 $overlay: rgba(0, 0, 0, 0.7);
 $black-overlay: rgba(0, 0, 0, 0.7);
@@ -11,10 +13,9 @@ body {
   font-family: 'Open Sans', sans-serif !important;
 }
 
-
 //nav bar
 .nav-bar {
-  background-color: #f2f2f2;
+  background-color: $offwhite;
 
   .nav-links a {
     color: $grey !important;
@@ -28,6 +29,14 @@ body {
 
   header {
     font-size: 24px;
+  }
+}
+
+.carousel-caption h1 {
+  @include mobile {
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px $dark-grey;
   }
 }
 
@@ -66,6 +75,13 @@ body {
 .row.no-padding {
   margin-left: 0;
   margin-right: 0;
+
+// adds margin to center the tiles when the screen isn't large enough for the image to take up the whole block
+  @include mobile-tiles {
+    margin-top: 40px;
+    margin-left: 16%;
+    margin-right: 16%;
+  }
 }
 
 .tiles-container,
